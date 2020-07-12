@@ -4,6 +4,9 @@
 
 using namespace std;
 
+// https://codeforces.com/problemset/problem/136/A
+// Codeforces Beta Round #97 (Div. 2)
+// A. Presents
 int main() {
     int n;
     cin >> n;
