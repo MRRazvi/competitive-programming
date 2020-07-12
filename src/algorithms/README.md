@@ -1,3 +1,3 @@
 ### Algorithms
 
-- [ ] replace
+- [ ] accumulate
