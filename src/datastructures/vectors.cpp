@@ -1,16 +1,26 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
+
+void display(vector<int>& v) {
+    // print al the elements in vector
+    cout << "Elements: ";
+    for (int num: v)
+        cout << num << " ";
+    cout << endl;
+}
 
 int main() {
     // dynamic arrays
     vector<int> v(20, 0); // constructor with 20 elements space, init with 0
+    v.reserve(20); // same as above to start with 20 space
     v = {1, 2};
-    v.push_back(3); // inset element at start
-    v.push_back(4);
-    v.push_back(5);
+    v.push_back(4); // inset element at start
+    v.push_back(3);
     v.push_back(6);
+    v.push_back(5);
 
     cout << "Size: " << v.size() << endl; // size of vector
     cout << "Capacity: " << v.capacity() << endl; // total allocate size
@@ -29,10 +39,11 @@ int main() {
     v.erase(v.end() - 1, v.end());
     v.erase(v.begin(), v.begin() + 1); // remove first element from vector
 
-    // print al the elements in vector
-    cout << "Elements: ";
-    for (int num: v)
-        cout << num << " ";
-    cout << endl;
+    sort(v.begin(), v.end()); // sort the elements in asc order
+    display(v);
+    sort(v.rbegin(), v.rend()); // sort the elements in desc order
+    display(v);
+
+    // swap, to swap two vectors
     return 0;
 }

@@ -10,9 +10,9 @@ class Solution {
 public:
     vector<int> runningSum(vector<int>& nums) {
         vector<int> v(nums.size());
-        for (int i=0; i<nums.size(); i++) {
-            v[i] = accumulate(nums.begin(), nums.begin() + i + 1, 0);
-        }
+        auto begin = nums.begin();
+        for (int i=0; i<nums.size(); i++)
+            v[i] = accumulate(begin, begin+i+1, 0);
         return v;
     }
 };
