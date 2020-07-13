@@ -1,9 +1,9 @@
 #include <iostream>
-#include <numeric>
+#include <vector>
+#include <algorithm>
+
 using namespace std;
 
 int main() {
-    cout << "Hello, World!";
-
     return 0;
 }
