@@ -7,12 +7,12 @@ using namespace std;
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-    int m, d;
-    cin >> m >> d;
-    if (m%d==0)
-        cout << "YES";
+    string a, b;
+    cin >> a >> b;
+    if (a.length() > b.length())
+        cout << a;
     else
-        cout << "NO";
+        cout << b;
     cout << endl;
     return 0;
 }
