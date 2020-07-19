@@ -1,23 +1,24 @@
 #include <iostream>
-#include <set>
+#include <string>
 #include <algorithm>
-typedef long long ll;
+
 using namespace std;
 
-int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
-    int n;
-    cin >> n;
-    multiset<int> s;
-    int num;
-    for (int i=0; i<n; i++) {
-        cin >> num;
-        s.insert(num);
+int main(){
+    string s;
+    cin >> s;
+    int l, u;
+    l = u = 0;
+    for (auto c: s) {
+        if (islower(c))
+            l++;
+        else
+            u++;
     }
-    for (auto num: s)
-        cout << num << " ";
-    cout << endl;
+    if (u > l)
+        transform(s.begin(), s.end(), s.begin(), ::toupper);
+    else
+        transform(s.begin(), s.end(), s.begin(), ::tolower);
+    cout << s << endl;
     return 0;
 }
