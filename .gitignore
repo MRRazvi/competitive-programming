@@ -3,3 +3,4 @@ CMakeLists.txt
 .idea/*
 /main.cpp
 main.cpp
+template.cpp
