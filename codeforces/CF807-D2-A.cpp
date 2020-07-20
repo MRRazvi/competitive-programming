@@ -19,7 +19,6 @@ int main() {
             cout << "rated" << endl;
             return 0;
         }
-
     }
 
     for (int i=0; i<n; i++) {
