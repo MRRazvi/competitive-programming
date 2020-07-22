@@ -4,6 +4,8 @@
 
 using namespace std;
 
+// Micro and Array Update
+// https://www.hackerearth.com/practice/data-structures/arrays/1-d/practice-problems/algorithm/micro-and-array-update/
 int main() {
     int t;
     cin >> t;
