@@ -127,7 +127,7 @@ int count() {
 void display() {
     Node *temp = HEAD;
     while (temp != nullptr) {
-        cout << temp->data << " ";
+        printf("%d ", temp->data);
         temp = temp->next;
     }
     cout << endl;
