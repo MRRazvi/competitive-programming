@@ -19,11 +19,15 @@ int count();
 void display();
 
 int main() {
-    insertBegin(2);
-    insertBegin(1);
-    insertEnd(4);
-    insertEnd(5);
-    insertAt(3, 2);
+    insertBegin(2);         // 2
+    insertBegin(1);         // 1 2
+    insertBegin(0);         // 0 1 2
+    insertEnd(4);           // 0 1 2 4
+    insertEnd(5);           // 0 1 2 4 5
+    insertEnd(6);           // 0 1 2 4 5 6
+    insertAt(3, 3);   // 0 1 2 3 4 5 6
+    deleteBegin();               // 1 2 3 4 5 6
+    deleteEnd();                 // 1 2 3 4 5
     display();
 }
 
