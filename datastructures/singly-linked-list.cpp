@@ -19,15 +19,19 @@ int count();
 void display();
 
 int main() {
-    insertBegin(2);         // 2
-    insertBegin(1);         // 1 2
-    insertBegin(0);         // 0 1 2
-    insertEnd(4);           // 0 1 2 4
-    insertEnd(5);           // 0 1 2 4 5
-    insertEnd(6);           // 0 1 2 4 5 6
-    insertAt(3, 3);   // 0 1 2 3 4 5 6
-    deleteBegin();               // 1 2 3 4 5 6
-    deleteEnd();                 // 1 2 3 4 5
+//    insertBegin(2);         // 2
+//    insertBegin(1);         // 1 2
+//    insertBegin(0);         // 0 1 2
+//    insertEnd(4);           // 0 1 2 4
+//    insertEnd(5);           // 0 1 2 4 5
+//    insertEnd(6);           // 0 1 2 4 5 6
+//    insertAt(3, 3);   // 0 1 2 3 4 5 6
+//    deleteBegin();               // 1 2 3 4 5 6
+//    deleteEnd();                 // 1 2 3 4 5
+
+    insertAt(1, 0);
+    insertAt(2, 0);
+    insertAt(3, 1);
     display();
 }
 
@@ -39,26 +43,24 @@ void insertBegin(int data) {
 }
 
 void insertAt(int data, int index) {
-    if (HEAD == nullptr)
-        return;
-
-    if (index == 0) {
-        insertBegin(data);
-        return;
-    }
-
     Node *node = (Node*) malloc(sizeof(Node));
     node->data = data;
+    if (HEAD == nullptr) {
+        node->next = HEAD;
+        HEAD = node;
+    }
 
     Node *temp = HEAD;
+    Node *prev = HEAD;
     int count = 0;
     while (temp != nullptr) {
-        if (count == index - 1) {
-            node->next = temp->next;
-            temp->next = node;
-            return;
+        if (count == index) {
+            prev->next = node;
+            node->next = temp;
+            break;
         }
         count++;
+        prev = temp;
         temp = temp->next;
     }
 }
