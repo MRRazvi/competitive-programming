@@ -1,10 +1,10 @@
 #include <iostream>
 
-typedef struct node {
+typedef struct Node {
     int data;
     struct node* left;
     struct node* right;
-} node;
+} Node;
 
 int main() {
     return 0;
