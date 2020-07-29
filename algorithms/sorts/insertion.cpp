@@ -8,7 +8,7 @@ vector<int> insertion(vector<int>& v) {
     for (i=1; i<v.size(); i++) {
         key = v[i];
         j = i-1;
-        while (j >= 0 && v[j] > key) {
+        while (j >= 0 && v[j] > key) { // < for decreasing order
             v[j+1] = v[j];
             j--;
         }
