@@ -1,5 +1,8 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
 
+typedef long long int ll;
 using namespace std;
 
 int main() {
@@ -7,18 +10,19 @@ int main() {
     cin.tie(nullptr);
     cout.tie(nullptr);
 
-    long long int n;
+    ll n;
     cin >> n;
-    cout << n << " ";
-    while (n != 1) {
-        if (n%2 == 0) {
-            n /= 2;
-        } else {
-            n *= 3;
-            n += 1;
+    vector<ll> v(n-1);
+    for (auto &input: v)
+        cin >> input;
+    sort(v.begin(), v.end());
+    ll ans = 0;
+    for (ll i=0; i<n-2; i++) {
+        if (v[i]+1 != v[i+1]) {
+            ans = v[i]+1;
+            break;
         }
-        cout << n << " ";
     }
-    cout << endl;
+    cout << ans << endl;
     return 0;
 }
