@@ -10,6 +10,11 @@ int main() {
     cin.tie(nullptr);
     cout.tie(nullptr);
 
+    #ifndef ONLINE_JUDGE
+        freopen("input.txt", "r", stdin);
+        freopen("output.txt", "w", stdout);
+    #endif
+
     ll n;
     cin >> n;
     vector<ll> v(n-1);
@@ -23,6 +28,8 @@ int main() {
             break;
         }
     }
-    cout << ans << endl;
+
+    cout << ans;
+    cout << endl;
     return 0;
 }

@@ -4,3 +4,5 @@ CMakeLists.txt
 /main.cpp
 main.cpp
 template.cpp
+input.txt
+output.txt
