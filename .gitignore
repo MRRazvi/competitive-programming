@@ -2,7 +2,7 @@ cmake-build-debug/*
 CMakeLists.txt
 .idea/*
 /main.cpp
-/template.cpp
-/input.txt
-/output.txt
-/cp.cpp
+main.cpp
+template.cpp
+input.txt
+output.txt
