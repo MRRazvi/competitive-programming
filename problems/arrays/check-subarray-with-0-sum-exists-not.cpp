@@ -1,3 +1,5 @@
+// Check if subarray with 0 sum is exists or not
+// https://www.techiedelight.com/check-subarray-with-0-sum-exists-not/
 #include <iostream>
 #include <vector>
 
