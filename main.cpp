@@ -1,33 +1,19 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 typedef long long ll;
 using namespace std;
 
 int main() {
+    freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 
-    vector<int> v = {3, 4, -7, 3, 1, 3, 1, -4, -2, -2};
-
-    bool answer = false;
-    for (int i=0; i<v.size(); i++) {
-        int sum = v[i];
-        for (int j=0; j<v.size(); j++) {
-            if (v[j] < 0 && i!=j)
-                sum -= v[j];
-            else
-                sum += v[j];
-
-            if (sum == 0) {
-                answer = true;
-                break;
-            }
-        }
-
-        if (answer)
-            break;
-    }
-
-    cout << ((answer) ? "Exist" : "Not Exist") << endl;
+    vector<int> v = {1, 1, 3};
+    do {
+        for (auto num: v)
+            cout << num << " ";
+        cout << endl;
+    } while (next_permutation(v.begin(), v.end()));
     return 0;
 }
