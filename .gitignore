@@ -3,6 +3,6 @@ CMakeLists.txt
 .idea/*
 /main.cpp
 main.cpp
-template.cpp
-input.txt
-output.txt
+/template.cpp
+/input.txt
+/output.txt
