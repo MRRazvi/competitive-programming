@@ -22,10 +22,10 @@ int main() {
     cin.tie(nullptr);
     cout.tie(nullptr);
 
-#ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-#endif
+    #ifndef ONLINE_JUDGE
+        freopen("input.txt", "r", stdin);
+        freopen("output.txt", "w", stdout);
+    #endif
 
     ll i, j;
     while (cin >> i >> j) {
