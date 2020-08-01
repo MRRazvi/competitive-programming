@@ -1,28 +1,28 @@
 #include <iostream>
 #include <set>
-#include <unordered_set>
+#include <unordered_map>
 
 typedef long long ll;
 using namespace std;
 
-class MyHashSet {
+class MyHashMap {
 private:
-    unordered_set<int> us;
+    int map[1000000];
 public:
-    MyHashSet() {
-
+    MyHashMap() {
+        fill_n(map, 1000000, -1);
     }
 
-    void add(int key) {
-        us.insert(key);
+    void put(int key, int value) {
+        this->map[key] = value;
+    }
+
+    int get(int key) {
+        return this->map[key];
     }
 
     void remove(int key) {
-        us.erase(key);
-    }
-
-    bool contains(int key) {
-        return us.count(key) >= 1;
+        this->map[key] = -1;
     }
 };
 
@@ -30,11 +30,14 @@ int main() {
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 
-    int key = 1;
-    MyHashSet* obj = new MyHashSet();
-    obj->add(key);
-    obj->remove(key);
-    bool param_3 = obj->contains(key);
-    cout << param_3 << endl;
+    MyHashMap hashMap = MyHashMap();
+    hashMap.put(1, 10);
+    hashMap.put(2, 20);
+    hashMap.put(3, 30);
+    // hashMap.remove(1);
+    cout << hashMap.get(1) << endl;
+    cout << hashMap.get(2) << endl;
+    cout << hashMap.get(3) << endl;
+
     return 0;
 }
