@@ -1,9 +1,5 @@
-#include <iostream>
-#include <string>
-
-typedef long long ll;
-using namespace std;
-
+// Time Conversion
+// https://www.hackerrank.com/challenges/time-conversion/problem
 string timeConversion(string s) {
     string check = s.substr(s.size()-2, s.size());
     s = s.substr(0, s.size()-2);
@@ -30,13 +26,4 @@ string timeConversion(string s) {
         }
     }
     return answer;
-}
-
-int main() {
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-
-    cout << timeConversion("12:45:54PM") << endl;
-
-    return 0;
 }
