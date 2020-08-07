@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
 
 typedef long long ll;
 using namespace std;
@@ -9,15 +11,23 @@ int main() {
 
     int n;
     cin >> n;
+    vector<int> a(n);
+    int min, max;
+    min = max = 0;
+    int index = 0;
+    for (auto &input: a) {
+        cin >> input;
 
-    if (n%2==1) {
-        cout << -1;
-    } else {
-        cout << "2 1 ";
-        for (int i=3; i<n; i+=2) {
-            cout << i+1 << " " << i;
-        }
+        if (input <= a[min])
+            min = index;
+        if (input > a[max])
+            max = index;
+        index++;
     }
-    cout << endl;
+
+    if (max > min)
+        cout << (max - 1) + (n - min) - 1 << endl;
+    else
+        cout << (max - 1) + (n - min) << endl;
     return 0;
 }

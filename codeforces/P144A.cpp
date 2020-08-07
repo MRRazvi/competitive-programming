@@ -1,24 +1,33 @@
+// A. Arrival of the General
+// https://codeforces.com/problemset/problem/144/A
 #include <iostream>
 #include <vector>
-
+typedef long long ll;
 using namespace std;
 
 int main() {
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+
     int n;
     cin >> n;
-    vector<int> v(n);
-    for (int i=0; i<n; i++)
-        cin >> v[i];
-    int count = 0;
-    for (int i=0; i<n; i++) {
-        for (int j=1; j<n - 1; j++) {
-            if (v[j] < v[j+1] && v[j+1] != v[j]) {
-                swap(v[j+1], v[j]);
-                count++;
-            }
-        }
+    vector<int> a(n);
+    int min, max;
+    min = max = 0;
+    int index = 0;
+    for (auto &input: a) {
+        cin >> input;
+
+        if (input <= a[min])
+            min = index;
+        if (input > a[max])
+            max = index;
+        index++;
     }
 
-    cout << count << endl;
+    if (max > min)
+        cout << (max - 1) + (n - min) - 1 << endl;
+    else
+        cout << (max - 1) + (n - min) << endl;
     return 0;
 }

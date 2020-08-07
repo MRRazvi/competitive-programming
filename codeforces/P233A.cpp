@@ -17,7 +17,7 @@ int main() {
     } else {
         cout << "2 1 ";
         for (int i=3; i<n; i+=2) {
-            cout << i+1 << " " << i;
+            cout << i+1 << " " << i << " ";
         }
     }
     cout << endl;
