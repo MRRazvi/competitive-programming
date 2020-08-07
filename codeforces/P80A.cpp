@@ -1,5 +1,6 @@
+// A. Panoramix's Prediction
+// https://codeforces.com/problemset/problem/80/A
 #include <iostream>
-#include <vector>
 #include <algorithm>
 
 typedef long long ll;
