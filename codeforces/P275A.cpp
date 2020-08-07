@@ -1,3 +1,5 @@
+// A. Lights Out
+// https://codeforces.com/problemset/problem/275/A
 #include <iostream>
 #include <algorithm>
 
@@ -16,7 +18,7 @@ int main() {
             toggled[i][j] = grid[i][j];
         }
     }
-    
+
     for (int i=1; i<=3; i++) {
         for (int j=1; j<=3; j++) {
             if (grid[i][j] != 0) {
