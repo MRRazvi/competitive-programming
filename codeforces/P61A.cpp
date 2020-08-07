@@ -1,3 +1,5 @@
+// A. Ultra-Fast Mathematician
+// https://codeforces.com/problemset/problem/61/A
 #include <iostream>
 
 typedef long long ll;
