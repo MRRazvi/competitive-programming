@@ -1,3 +1,5 @@
+// A. I_love_%username%
+// https://codeforces.com/contest/155/problem/A
 #include <iostream>
 #include <vector>
 #include <algorithm>
