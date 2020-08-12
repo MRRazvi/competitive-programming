@@ -34,24 +34,6 @@ int size(); // list size
 bool is_empty(); // check list is empty
 void traverse(); // display all the elements in list
 
-int main() {
-    push_front(2);
-    // push_front(2);
-    // push_front(3);
-    push_back(3);
-    push_back(5);
-    push_front(1);
-    push_at(4, 3);
-    pop_front();
-    pop_back();
-    pop_at(1);
-
-    printf("size: %d\n", size());
-    printf("get: %d\n", get(1));
-    printf("find: %d\n", find(2));
-    traverse();
-}
-
 void push_front(int data) {
     ListNode* node = (ListNode*) malloc(sizeof(ListNode));
     node->data = data;
@@ -104,11 +86,18 @@ int pop_front() {
     ListNode* temp = HEAD;
     HEAD = temp->next;
     int value = temp->data;
-    free(temp);
     return value;
 }
 
 int pop_at(int index) {
+    if (index == 0) {
+        return pop_front();
+    }
+
+    if (index == size()-1) {
+        return pop_back();
+    }
+
     ListNode* temp = HEAD;
     ListNode* last;
     int count = 0;
@@ -116,7 +105,6 @@ int pop_at(int index) {
         if (count == index) {
             last->next = temp->next;
             int value = temp->data;
-            free(temp);
             return value;
         }
         count++;
@@ -135,7 +123,6 @@ int pop_back() {
     }
     last->next = NULL;
     int value = temp->data;
-    free(temp);
     return value;
 }
 
@@ -144,7 +131,6 @@ int get(int index) {
     int count = 0;
     while (temp != NULL) {
         if (count == index) {
-            free(temp);
             return temp->data;
         }
         count++;
