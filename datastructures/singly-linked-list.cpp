@@ -1,136 +1,191 @@
-#include <iostream>
+/**
+ * It's my own implementation of linked list with all the standards
+ * ADT's such as:
+ *
+ * - push_front, push_at, push_back
+ * - pop_front, pop_at, pop_back
+ * - get, find
+ * - is_empty, size
+ * - traverse
+ *
+ * @author Mubashir R. Razvi
+ */
 
-using namespace std;
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
 
-typedef struct Node {
+typedef struct ListNode {
     int data;
-    struct Node* next;
-} Node;
+    struct ListNode *next;
+} ListNode;
 
-Node* HEAD = nullptr;
+ListNode* HEAD = NULL; // pointer to track position of first element
 
-void insertBegin(int data);
-void insertAt(int data, int index);
-void insertEnd(int data);
-void deleteBegin();
-void deleteAt(int index);
-void deleteEnd();
-int count();
-void display();
+void push_front(int data); // add element at front of list
+void push_at(int data, int index); // add element at specific index
+void push_back(int data); // add element at the last
+int pop_front(); // delete element from front and return the value
+int pop_at(int index); // delete element from specific index
+int pop_back(); // delete element from last
+int get(int index); // get the value from specific index
+bool find(int value); // check the value exist in list or not
+int size(); // list size
+bool is_empty(); // check list is empty
+void traverse(); // display all the elements in list
 
 int main() {
-//    insertBegin(2);         // 2
-//    insertBegin(1);         // 1 2
-//    insertBegin(0);         // 0 1 2
-//    insertEnd(4);           // 0 1 2 4
-//    insertEnd(5);           // 0 1 2 4 5
-//    insertEnd(6);           // 0 1 2 4 5 6
-//    insertAt(3, 3);   // 0 1 2 3 4 5 6
-//    deleteBegin();               // 1 2 3 4 5 6
-//    deleteEnd();                 // 1 2 3 4 5
+    push_front(2);
+    // push_front(2);
+    // push_front(3);
+    push_back(3);
+    push_back(5);
+    push_front(1);
+    push_at(4, 3);
+    pop_front();
+    pop_back();
+    pop_at(1);
 
-    insertAt(1, 0);
-    insertAt(2, 0);
-    insertAt(3, 1);
-    display();
+    printf("size: %d\n", size());
+    printf("get: %d\n", get(1));
+    printf("find: %d\n", find(2));
+    traverse();
 }
 
-void insertBegin(int data) {
-    Node *node = (Node*) malloc(sizeof(Node));
+void push_front(int data) {
+    ListNode* node = (ListNode*) malloc(sizeof(ListNode));
     node->data = data;
     node->next = HEAD;
     HEAD = node;
 }
 
-void insertAt(int data, int index) {
-    Node *node = (Node*) malloc(sizeof(Node));
+void push_at(int data, int index) {
+    ListNode* node = (ListNode*) malloc(sizeof(ListNode));
     node->data = data;
-    if (HEAD == nullptr) {
+    if (HEAD == NULL) {
         node->next = HEAD;
         HEAD = node;
-    }
+    } else {
+        ListNode* temp = HEAD;
+        ListNode* last;
+        int count = 0;
+        while (temp != NULL) {
+            if (count == index) {
+                node->next = temp;
+                last->next = node;
+                return;
+            }
 
-    Node *temp = HEAD;
-    Node *prev = HEAD;
-    int count = 0;
-    while (temp != nullptr) {
-        if (count == index) {
-            prev->next = node;
-            node->next = temp;
-            break;
+            count++;
+            last = temp;
+            temp = temp->next;
         }
-        count++;
-        prev = temp;
-        temp = temp->next;
     }
 }
 
-void insertEnd(int data) {
-    Node *node = (Node*) malloc(sizeof(Node));
+void push_back(int data) {
+    ListNode* node = (ListNode*) malloc(sizeof(ListNode));
     node->data = data;
-    if (HEAD == nullptr) {
-        node->next = nullptr;
-        HEAD = node;
+    if (HEAD == NULL) {
+        node->next = HEAD;
     } else {
-        Node *temp = HEAD;
-        Node *last;
-        while (temp != nullptr) {
+        ListNode* temp = HEAD;
+        ListNode* last;
+        while (temp != NULL) {
             last = temp;
             temp = temp->next;
         }
         last->next = node;
-        node->next = nullptr;
+        node->next = NULL;
     }
 }
 
-void deleteBegin() {
-    deleteAt(0);
+int pop_front() {
+    ListNode* temp = HEAD;
+    HEAD = temp->next;
+    int value = temp->data;
+    free(temp);
+    return value;
 }
 
-void deleteAt(int index) {
-    if (HEAD == nullptr)
-        return;
-
-    Node *temp = HEAD;
-    if (index == 0) {
-        HEAD = temp->next;
-        free(temp);
-        return;
-    }
-
-    Node *target = nullptr;
+int pop_at(int index) {
+    ListNode* temp = HEAD;
+    ListNode* last;
     int count = 0;
-    while (temp != nullptr) {
-        if (count == index - 1) {
-            target = temp->next;
-            temp->next = temp->next->next;
-            free(target);
-            break;
+    while(temp != NULL) {
+        if (count == index) {
+            last->next = temp->next;
+            int value = temp->data;
+            free(temp);
+            return value;
+        }
+        count++;
+        last = temp;
+        temp = temp->next;
+    }
+    return -1;
+}
+
+int pop_back() {
+    ListNode* temp = HEAD;
+    ListNode* last;
+    while(temp->next != NULL) {
+        last = temp;
+        temp = temp->next;
+    }
+    last->next = NULL;
+    int value = temp->data;
+    free(temp);
+    return value;
+}
+
+int get(int index) {
+    ListNode* temp = HEAD;
+    int count = 0;
+    while (temp != NULL) {
+        if (count == index) {
+            free(temp);
+            return temp->data;
         }
         count++;
         temp = temp->next;
     }
+    free(temp);
+    return -1;
 }
 
-void deleteEnd() {
-    deleteAt(count() - 1);
+bool find(int value) {
+    ListNode* temp = HEAD;
+    while(temp != NULL) {
+        if (temp->data == value) {
+            return true;
+        }
+        temp = temp->next;
+    }
+    return false;
 }
 
-int count() {
-    Node *temp = HEAD;
+int size() {
+    ListNode* temp = HEAD;
     int count = 0;
-    while (temp != nullptr) {
+    while(temp != NULL) {
         count++;
         temp = temp->next;
     }
+    free(temp);
     return count;
 }
 
-void display() {
-    Node *temp = HEAD;
-    while (temp != nullptr) {
+bool is_empty() {
+    return size() == 0;
+}
+
+void traverse() {
+    ListNode* temp = HEAD;
+    while (temp != NULL) {
         printf("%d ", temp->data);
         temp = temp->next;
     }
-    cout << endl;
+    printf("\n");
+    free(temp);
 }
