@@ -1,3 +1,7 @@
+// A. Diverse Team
+// https://codeforces.com/problemset/problem/988/A
+// 10 mint avg
+
 #include <iostream>
 #include <vector>
 #include <set>
