@@ -1,6 +1,8 @@
+// A. Points in Segments
+// https://codeforces.com/contest/1015/problem/A
+// 10 mint avg
 #include <iostream>
 #include <vector>
-#include <set>
 #include <algorithm>
 
 typedef long long ll;
