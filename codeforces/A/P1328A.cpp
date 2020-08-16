@@ -18,12 +18,12 @@ int main() {
     while (t--) {
         int a, b;
         cin >> a >> b;
-        int moves = 0;
-        while (a%b != 0) {
-            a++;
-            moves++;
-        }
-        cout << moves << endl;
+
+        if (a%b == 0)
+            cout << 0;
+        else
+            cout << b-a%b;
+        cout << endl;
     }
     return 0;
 }
