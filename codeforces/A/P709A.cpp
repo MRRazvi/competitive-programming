@@ -1,6 +1,9 @@
+// A. Juicer
+// https://codeforces.com/contest/709/problem/A
+// 5 mint avg
+
 #include <iostream>
 #include <vector>
-#include <map>
 #include <algorithm>
 
 typedef long long ll;
