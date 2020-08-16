@@ -1,3 +1,7 @@
+// A. Buy a Shove
+// https://codeforces.com/contest/732/problem/A
+// 15 mint avg
+
 #include <iostream>
 #include <vector>
 #include <set>
