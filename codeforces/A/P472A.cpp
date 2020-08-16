@@ -1,3 +1,8 @@
+// A. Design Tutorial: Learn from Math
+// https://codeforces.com/problemset/problem/472/A
+// 10 mint avg
+// math, composite number, implementation
+
 #include <iostream>
 #include <algorithm>
 
