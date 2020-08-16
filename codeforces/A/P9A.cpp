@@ -1,6 +1,9 @@
+// A. Die Roll
+// https://codeforces.com/contest/9/problem/A
+// 10 mint avg
+
 #include <iostream>
 #include <vector>
-#include <map>
 #include <algorithm>
 
 typedef long long ll;
