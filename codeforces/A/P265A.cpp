@@ -1,6 +1,8 @@
+// A. Colorful Stones (Simplified Edition)
+// https://codeforces.com/contest/265/problem/A
+// 5 mint avg
+
 #include <iostream>
-#include <vector>
-#include <map>
 #include <algorithm>
 
 typedef long long ll;
