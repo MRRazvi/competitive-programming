@@ -1,3 +1,8 @@
+// A. Candies and Two Sisters
+// https://codeforces.com/problemset/problem/1335/A
+// 5 mint avg
+// math, implementation
+
 #include <iostream>
 #include <algorithm>
 
