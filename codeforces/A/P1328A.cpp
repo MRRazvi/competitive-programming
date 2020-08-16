@@ -1,3 +1,8 @@
+// A. Divisibility Problem
+// https://codeforces.com/problemset/problem/1328/A
+// 2 mint avg
+// math, brute force
+
 #include <iostream>
 #include <algorithm>
 
