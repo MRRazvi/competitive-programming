@@ -1,7 +1,7 @@
 #include <iostream>
 #include <algorithm>
 
-typedef int32_t ll;
+typedef int64_t ll;
 using namespace std;
 
 int main() {
