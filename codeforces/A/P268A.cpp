@@ -1,8 +1,9 @@
+// A. Games
+// https://codeforces.com/problemset/problem/268/A
+// 10 mint avg
+// array, implementation
+
 #include <iostream>
-#include <vector>
-#include <set>
-#include <map>
-#include <algorithm>
 
 typedef int64_t ll;
 using namespace std;
