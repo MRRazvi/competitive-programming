@@ -1,8 +1,9 @@
+// A. Dubstep
+// https://codeforces.com/problemset/problem/208/A
+// 10 mint avg
+// string, implementation
+
 #include <iostream>
-#include <vector>
-#include <set>
-#include <map>
-#include <algorithm>
 
 typedef int64_t ll;
 using namespace std;
