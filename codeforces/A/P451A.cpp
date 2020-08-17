@@ -1,8 +1,9 @@
+// A. Game With Sticks
+// https://codeforces.com/problemset/problem/451/A
+// 5 mint avg
+// implementation
+
 #include <iostream>
-#include <vector>
-#include <set>
-#include <map>
-#include <algorithm>
 
 typedef int64_t ll;
 using namespace std;
