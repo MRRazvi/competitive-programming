@@ -1,15 +1,16 @@
+// A. Lucky Division
+// https://codeforces.com/problemset/problem/122/A
+// 10 mint avg
+// mod math, implementation
+
 #include <iostream>
 #include <vector>
-#include <set>
-#include <map>
-#include <algorithm>
 
 typedef int64_t ll;
 using namespace std;
 
 int main() {
     freopen("output.txt", "w", stdout);
-
 
     int n;
     cin >> n;
