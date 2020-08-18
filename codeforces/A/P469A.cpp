@@ -1,7 +1,10 @@
+// A. I Wanna Be the Guy
+// https://codeforces.com/problemset/problem/469/A
+// 8 mint avg
+// set, array, implementation
+
 #include <iostream>
-#include <vector>
 #include <set>
-#include <map>
 #include <algorithm>
 
 typedef int64_t ll;
