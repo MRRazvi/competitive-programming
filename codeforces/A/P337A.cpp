@@ -1,7 +1,10 @@
+// A. Puzzles
+// https://codeforces.com/contest/337/problem/A
+// 15 mint avg
+// array, sort, implementation
+
 #include <iostream>
 #include <vector>
-#include <set>
-#include <map>
 #include <algorithm>
 
 typedef int64_t ll;

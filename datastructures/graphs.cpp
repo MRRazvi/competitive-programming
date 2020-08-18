@@ -1,53 +1,44 @@
 #include <iostream>
+#include <vector>
+#include <list>
 #include <algorithm>
 
 typedef long long ll;
 using namespace std;
 
-int main() {
-    freopen("output.txt", "w", stdout);
+class Graph {
+private:
+    int V;
+    list<int> *l;
+public:
+    Graph(int V) {
+        this->V = V;
+        this->l = new list<int>[V];
+    }
 
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
+    void addEdge(int x, int y) {
+        this->l[x].push_back(y);
+        this->l[y].push_back(x);
+    }
 
-    int t;
-    cin >> t;
-    while (t--) {
-        ll n, k;
-        cin >> n >> k;
-        ll p[n];
-        for (ll i=0; i<n; i++)
-            cin >> p[i];
-
-        int moves = 0;
-        for (ll i=0; i<n; i++) {
-            if (p[i] == k)
-                moves++;
-
-            if (p[i] < k) {
-                ll num = p[i];
-                ll count = 0;
-                while (true) {
-                    num += p[i];
-                    count++;
-
-                    if (num == k) {
-                        moves += count;
-                    }
-
-                    if (num > k) {
-                        break;
-                    }
-                }
+    void traverse() {
+        for (int i=0; i<V; i++) {
+            cout << i << ": ";
+            for (auto j: this->l[i]) {
+                cout << j << " ";
             }
+            cout << endl;
         }
-
-        if (moves)
-            cout << moves;
-        else
-            cout << -1;
         cout << endl;
     }
+};
+
+int main() {
+    Graph g(5);
+    g.addEdge(1, 2);
+    g.addEdge(1, 3);
+    g.addEdge(1, 5);
+    g.addEdge(3, 4);
+    g.traverse();
     return 0;
 }
