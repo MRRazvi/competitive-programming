@@ -1,7 +1,9 @@
+// A. Even Odds
+// https://codeforces.com/problemset/problem/318/A
+// 10 mint
+// math, formula derived
+
 #include <iostream>
-#include <vector>
-#include <set>
-#include <map>
 #include <algorithm>
 
 typedef int64_t ll;
