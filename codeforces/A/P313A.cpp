@@ -1,8 +1,9 @@
+// A. Ilya and Bank Account
+// https://codeforces.com/problemset/problem/313/A
+// 8 mint avg
+// string, math, implementation
+
 #include <iostream>
-#include <vector>
-#include <set>
-#include <map>
-#include <algorithm>
 
 typedef int64_t ll;
 using namespace std;
