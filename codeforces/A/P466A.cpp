@@ -1,8 +1,9 @@
+// A. Cheap Travel
+// https://codeforces.com/problemset/problem/466/A
+// 10 mint avg
+// math
+
 #include <iostream>
-#include <vector>
-#include <set>
-#include <map>
-#include <algorithm>
 
 typedef int64_t ll;
 using namespace std;
