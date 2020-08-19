@@ -1,7 +1,9 @@
+// A. Dragons
+// https://codeforces.com/contest/230/problem/A
+// 20 mint avg
+// array, sorting, implementation
+
 #include <iostream>
-#include <vector>
-#include <set>
-#include <map>
 #include <algorithm>
 
 typedef int64_t ll;
