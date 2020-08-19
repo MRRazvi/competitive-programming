@@ -1,8 +1,9 @@
+// A. HQ9+
+// https://codeforces.com/problemset/problem/133/A
+// 5 mint avg
+// string
+
 #include <iostream>
-#include <vector>
-#include <set>
-#include <map>
-#include <algorithm>
 
 typedef int64_t ll;
 using namespace std;
