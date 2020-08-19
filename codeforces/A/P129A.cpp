@@ -1,7 +1,10 @@
+// A. Cookies
+// https://codeforces.com/problemset/problem/129/A
+// 5 mint avg
+// array, implementation
+
 #include <iostream>
 #include <vector>
-#include <set>
-#include <map>
 #include <algorithm>
 
 typedef int64_t ll;
