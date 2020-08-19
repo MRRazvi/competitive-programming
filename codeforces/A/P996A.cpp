@@ -1,3 +1,8 @@
+// A. Hit the Lottery
+// https://codeforces.com/problemset/problem/996/A
+// 10 mint avg
+// greedy, array, implementation
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
