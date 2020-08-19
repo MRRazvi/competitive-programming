@@ -1,7 +1,10 @@
+// B. Two Arrays And Swaps
+// https://codeforces.com/problemset/problem/1353/B
+// 15 mint avg
+// greedy, array, sort, implementation
+
 #include <iostream>
 #include <vector>
-#include <array>
-#include <cmath>
 #include <algorithm>
 
 typedef long long ll;
