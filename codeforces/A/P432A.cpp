@@ -1,3 +1,8 @@
+// A. Choosing Teams
+// https://codeforces.com/problemset/problem/432/A
+// 5 mint avg
+// greedy, array, implementation
+
 #include <iostream>
 #include <vector>
 #include <cmath>
