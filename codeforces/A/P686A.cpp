@@ -1,6 +1,10 @@
+// A. Free Ice Cream
+// https://codeforces.com/contest/686/problem/A
+// 5 mint avg
+// array, implementation
+
 #include <iostream>
 #include <vector>
-#include <map>
 #include <algorithm>
 
 typedef long long ll;
