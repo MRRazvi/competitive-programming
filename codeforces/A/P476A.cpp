@@ -1,7 +1,9 @@
+// A. Dreamoon and Stairs
+// https://codeforces.com/problemset/problem/476/A
+// 10 mint avg
+// math, implementation
+
 #include <iostream>
-#include <vector>
-#include <map>
-#include <algorithm>
 
 typedef long long ll;
 using namespace std;
