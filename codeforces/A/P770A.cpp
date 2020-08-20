@@ -1,6 +1,10 @@
+// A. New Password
+// https://codeforces.com/contest/770/problem/A
+// string, array, implementation
+// 2 mint avg
+
 #include <iostream>
 #include <vector>
-#include <map>
 #include <algorithm>
 
 typedef long long ll;
