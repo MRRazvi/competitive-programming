@@ -1,6 +1,10 @@
+// A. Helpful Maths
+// https://codeforces.com/contest/339/problem/A
+// implementation, string, array
+// 2 mint avg
+
 #include <iostream>
 #include <vector>
-#include <map>
 #include <algorithm>
 
 typedef long long ll;
