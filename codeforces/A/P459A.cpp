@@ -1,6 +1,9 @@
+// A. Pashmak and Garden
+// https://codeforces.com/contest/459/problem/A
+// 30 mint avg
+// math, geometry, implementation
+
 #include <iostream>
-#include <vector>
-#include <map>
 #include <algorithm>
 
 typedef long long ll;
