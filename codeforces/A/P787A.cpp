@@ -1,7 +1,10 @@
+// A. The Monster
+// https://codeforces.com/contest/787/problem/A
+// 10 mint avg
+// array, math, implementation
+
 #include <iostream>
 #include <vector>
-#include <map>
-#include <algorithm>
 
 typedef long long ll;
 using namespace std;
