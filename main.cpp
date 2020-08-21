@@ -9,19 +9,19 @@ using namespace std;
 int main() {
     freopen("output.txt", "w", stdout);
 
-    int n, m, x;
-    cin >> n >> m;
-    if (m > n)
-        x = -1;
-    else {
-        if (n%2 == 0)
-            x = n/2;
-        else
-            x = (n/2)+1;
-        while (x%m != 0)
-            x++;
-    }
+    vector<int> v = {1, 2, 3, 4, 5};
+    int num = 4;
 
-    cout << x << endl;
+    int left = 0, right = v.size()-1;
+    while (left < right) {
+        int mid = (left+right)/2;
+        if (v[mid] == num) {
+            // found
+        }
+        if (v[mid] > num)
+            right = mid-1;
+        else
+            left = mid+1;
+    }
     return 0;
 }
