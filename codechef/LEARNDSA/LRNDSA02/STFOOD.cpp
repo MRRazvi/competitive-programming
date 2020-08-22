@@ -1,3 +1,6 @@
+// Chef and Street Food
+// https://www.codechef.com/LRNDSA02/problems/STFOOD
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
