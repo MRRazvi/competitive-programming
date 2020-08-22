@@ -1,7 +1,5 @@
-6
-gaga
-abcde
-rotor
-xyzxy
-abbaab
-ababc
+4
+12345
+31203
+2123
+2300

@@ -1,6 +1,7 @@
+// Reverse The Number
+// https://www.codechef.com/LRNDSA01/problems/FLOW007
+
 #include <iostream>
-#include <vector>
-#include <map>
 #include <algorithm>
 
 typedef long long ll;
