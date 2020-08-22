@@ -1,7 +1,7 @@
+// Life, the Universe, and Everything
+// https://www.codechef.com/LRNDSA01/problems/TEST
+
 #include <iostream>
-#include <vector>
-#include <map>
-#include <algorithm>
 
 typedef long long ll;
 using namespace std;
