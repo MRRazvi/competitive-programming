@@ -1,6 +1,7 @@
+// Lapindromes
+// https://www.codechef.com/LRNDSA01/problems/LAPIN
+
 #include <iostream>
-#include <vector>
-#include <map>
 #include <algorithm>
 
 typedef long long ll;

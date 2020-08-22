@@ -1,5 +1,7 @@
-2
-3
-101011
-3
-100001
+6
+gaga
+abcde
+rotor
+xyzxy
+abbaab
+ababc
