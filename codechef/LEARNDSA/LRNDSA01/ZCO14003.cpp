@@ -1,6 +1,9 @@
+// Smart Phone (ZCO14003)
+// Zonal Computing Olympiad 2014, 30 Nov 2013
+// https://www.codechef.com/LRNDSA01/problems/ZCO14003
+
 #include <iostream>
 #include <vector>
-#include <map>
 #include <algorithm>
 
 typedef long long ll;
