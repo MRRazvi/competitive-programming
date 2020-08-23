@@ -1,3 +1,6 @@
+// ADDREV - Adding Reversed Numbers
+// https://www.spoj.com/problems/ADDREV/
+
 #include <iostream>
 #include <vector>
 #include <algorithm>

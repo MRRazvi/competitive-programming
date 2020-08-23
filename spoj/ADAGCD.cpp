@@ -5,15 +5,8 @@
 #include <vector>
 #include <algorithm>
 
-typedef long long ll;
+typedef int64_t ll;
 using namespace std;
-
-int gcd(int a, int b) {
-    if (b == 0)
-        return a;
-    return gcd(b, a%b);
-}
-
 int main() {
     freopen("output.txt", "w", stdout);
 
@@ -36,8 +29,8 @@ int main() {
 
     ll ans = nums[0];
     for (int i=1; i<nums.size(); i++) {
-        ans = gcd(ans, nums[i]);
+        ans = __gcd(ans, nums[i]);
     }
-    cout << ans << endl;
+    cout << (ans%1000000007) << endl;
     return 0;
 }
