@@ -1,6 +1,9 @@
+// Allocation
+// Round A 2020
+// https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3f56
+
 #include <iostream>
 #include <vector>
-#include <bitset>
 #include <algorithm>
 
 typedef long long ll;
