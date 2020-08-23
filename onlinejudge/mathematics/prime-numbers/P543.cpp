@@ -1,3 +1,6 @@
+// 543 - Goldbach's Conjecture
+// https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=484
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
