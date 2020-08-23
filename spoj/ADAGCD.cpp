@@ -1,3 +1,6 @@
+// ADAGCD - Ada and GCD
+// https://www.spoj.com/problems/ADAGCD/
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
