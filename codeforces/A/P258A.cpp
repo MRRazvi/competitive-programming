@@ -1,7 +1,7 @@
+// A. Little Elephant and BitsA. Little Elephant and Bits
+// https://codeforces.com/contest/258/problem/A
+
 #include <iostream>
-#include <vector>
-#include <bitset>
-#include <algorithm>
 
 typedef long long ll;
 using namespace std;
