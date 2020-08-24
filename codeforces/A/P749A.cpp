@@ -1,3 +1,6 @@
+// A. Bachgold Problem
+// https://codeforces.com/problemset/problem/749/A
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
