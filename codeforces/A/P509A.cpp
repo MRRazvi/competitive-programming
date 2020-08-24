@@ -1,3 +1,6 @@
+// A. Maximum in Table
+// https://codeforces.com/problemset/problem/509/A
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
