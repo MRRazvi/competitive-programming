@@ -1,3 +1,6 @@
+// A. Maximum GCD
+// https://codeforces.com/contest/1370/problem/A
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
