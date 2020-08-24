@@ -1,3 +1,6 @@
+// A. EhAb AnD gCd
+// https://codeforces.com/problemset/problem/1325/A
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
