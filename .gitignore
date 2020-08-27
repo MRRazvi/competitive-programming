@@ -1,7 +1,6 @@
 cmake-build-debug/*
 CMakeLists.txt
-.idea/*
+.vscode/*
+*.txt
 main.cpp
-template.cpp
-input.txt
-output.txt
+main.exe
